@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النشرة التقنية الأسبوعية - 23-30 يوليو 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #bbdefb 0%, #e1bee7 100%);
+            color: #2c3e50;
+            margin: -20px -20px 40px -20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="tech-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23tech-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .academy-info {
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .academy-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .academy-text {
+            flex: 1;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .academy-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .academy-text p {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .date-info {
+            background: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .date-info h2 {
+            font-size: 1.4rem;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .date-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .overview {
+            background: linear-gradient(135deg, #ffcdd2 0%, #f8bbd9 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid rgba(233, 30, 99, 0.2);
+        }
+
+        .overview h2 {
+            font-size: 2rem;
+            color: #c2185b;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .overview p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 2px solid #f0f0f0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            font-weight: 700;
+            flex: 1;
+        }
+
+        .ai-section {
+            border-left: 8px solid #4fc3f7;
+        }
+
+        .mobile-section {
+            border-left: 8px solid #ab47bc;
+        }
+
+        .companies-section {
+            border-left: 8px solid #66bb6a;
+        }
+
+        .security-section {
+            border-left: 8px solid #ff7043;
+        }
+
+        .news-item {
+            background: #fafafa;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .news-item h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .news-item p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e1f5fe 0%, #f3e5f5 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 5px solid #29b6f6;
+            font-weight: 500;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            color: #555;
+            border: 1px solid rgba(255, 152, 0, 0.2);
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .news-date {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .news-source {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            background: rgba(25, 118, 210, 0.1);
+            border-radius: 5px;
+        }
+
+        .news-source:hover {
+            background: rgba(25, 118, 210, 0.2);
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .key-points {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f4ff 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 2px solid rgba(76, 175, 80, 0.2);
+        }
+
+        .key-points h2 {
+            font-size: 2rem;
+            color: #388e3c;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .key-point {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            border-left: 5px solid #4caf50;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8eaf6 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+
+        .footer h2 {
+            font-size: 2rem;
+            color: #3f51b5;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .footer h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .source-link {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1565c0;
+            font-weight: 500;
+            border: 1px solid #e3f2fd;
+            display: block;
+        }
+
+        .source-link:hover {
+            background: #e3f2fd;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #fff8e1 0%, #f3e5f5 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.2);
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            color: #f57c00;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        .contact-info h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        .features-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-highlight {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            color: #555;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e8eaf6 100%);
+            border-radius: 15px;
+            margin: 40px 0;
+            color: #666;
+            font-style: italic;
+            border: 1px solid #e0e0e0;
+        }
+
+        .copyright p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 30px 15px;
+                margin: -15px -15px 30px -15px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .academy-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .academy-logo {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 15px;
+            }
+
+            .academy-text {
+                margin: 0;
+            }
+
+            .academy-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 20px;
+                margin: 30px 0;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-icon {
+                margin: 0 0 15px 0;
+            }
+
+            .news-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .sources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-highlight {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .academy-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .academy-text h1 {
+                font-size: 1.3rem;
+            }
+
+            .academy-text p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .news-item h3 {
+                font-size: 1.4rem;
+            }
+
+            .overview h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer h2 {
+                font-size: 1.6rem;
+            }
+
+            .contact-info h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="academy-info">
+                <img src="academy_logo_new.png" alt="شعار الأكاديمية الملكية للشرطة" class="academy-logo">
+                <div class="academy-text">
+                    <h1>الأكاديمية الملكية للشرطة</h1>
+                    <p>معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</p>
+                </div>
+                <img src="academy_logo_new.png" alt="شعار الأكاديمية الملكية للشرطة" class="academy-logo">
+            </div>
+            
+            <h1>النشرة التقنية الأسبوعية ⭐</h1>
+            <p class="subtitle">آخر المستجدات في علم التكنولوجيا والذكاء الاصطناعي 🚀</p>
+            
+            <div class="date-info">
+                <h2>📅 العدد الثاني - تاريخ الإصدار: 30 يوليو 2025</h2>
+                <p>📝 إعداد: معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</p>
+                <p>🌐 المصدر: تجميع من أهم المواقع التقنية العربية والعالمية</p>
+                <p>📊 فترة التغطية: 23-30 يوليو 2025</p>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <section class="overview">
+            <h2>🎯 نظرة عامة على الأسبوع</h2>
+            <p>
+                🔥 شهد الأسبوع الماضي <strong>تطورات استثنائية</strong> في عالم التكنولوجيا، حيث برزت أخبار مهمة حول إطلاق <strong>GPT-5</strong> من OpenAI 🤖، وتحديثات جديدة من مايكروسوفت وجوجل في مجال الذكاء الاصطناعي 📊. كما شهدنا إطلاق هواتف جديدة من سامسونج وتطورات في مجال الأمن السيبراني، مما يجعل هذا الأسبوع حافلاً بالابتكارات والإعلانات المهمة.
+            </p>
+        </section>
+
+        <!-- AI Section -->
+        <section class="section ai-section">
+            <div class="section-header">
+                <img src="ai_section_icon.png" alt="أيقونة الذكاء الاصطناعي" class="section-icon">
+                <h2>🤖 أخبار الذكاء الاصطناعي</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>🚀 OpenAI تعتزم إطلاق GPT-5 في أغسطس المقبل</h3>
+                <div class="highlight-box">
+                    في إعلان <strong>مثير للاهتمام</strong>، تستعد شركة OpenAI لإطلاق أحدث نماذجها <strong>GPT-5</strong> خلال الصيف الجاري، وسط ترقّب واسع في قطاع الذكاء الاصطناعي، خاصةً مع اشتداد المنافسة في هذا المجال.
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">🧠 قدرات تفكير متقدمة</div>
+                    <div class="feature-item">💬 فهم أعمق للسياق</div>
+                    <div class="feature-item">🎯 دقة أعلى في الإجابات</div>
+                    <div class="feature-item">⚡ سرعة استجابة محسنة</div>
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 25 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🌐 مايكروسوفت تختبر وضعًا جديدًا لتجربة تصفح مدعومة بالذكاء الاصطناعي</h3>
+                <div class="highlight-box">
+                    بدأت شركة <strong>مايكروسوفت</strong> اختبار وضع تجريبي جديد يُدعى <strong>"وضع كوبيلوت Copilot Mode"</strong> داخل متصفحها إيدج، إذ يوفر للمستخدمين تجربة تصفح محسنة بالذكاء الاصطناعي.
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">🔍 بحث ذكي محسن</div>
+                    <div class="feature-item">📝 تلخيص تلقائي للصفحات</div>
+                    <div class="feature-item">💡 اقتراحات ذكية</div>
+                    <div class="feature-item">🎯 تخصيص المحتوى</div>
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 29 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🔍 جوجل تختبر ميزة Web Guide لتنظيم نتائج البحث</h3>
+                <div class="highlight-box">
+                    أعلنت شركة <strong>جوجل</strong> إطلاق ميزة تجريبية جديدة تُدعى <strong>Web Guide</strong>، وهي أداة مدعومة بالذكاء الاصطناعي تهدف إلى تنظيم نتائج البحث وتحسين تجربة المستخدم.
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 26 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>👗 جوجل تُطلق أداة لتجربة الملابس افتراضيًا بالذكاء الاصطناعي</h3>
+                <p>
+                    أعلنت شركة <strong>جوجل</strong> بدء طرح أداة جديدة لتجربة الملابس افتراضيًا عبر الإنترنت، وذلك بعد عرضها لأول مرة خلال مؤتمر I/O. هذه الأداة تستخدم تقنيات الذكاء الاصطناعي المتقدمة لمحاكاة تجربة التسوق الحقيقية.
+                </p>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 25 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🌊 "كاوست" و"ديجيلاب" يتعاونان لتطوير أول نموذج ذكاء اصطناعي لحماية الشعاب المرجانية</h3>
+                <div class="highlight-box">
+                    في خطوة نوعية تمثل تحولًا عالميًا في جهود الحفاظ البيئي، أعلنت جامعة الملك عبد الله للعلوم والتقنية <strong>(كاوست)</strong> تعاونها مع <strong>ديجيلاب</strong> لتطوير أول نموذج ذكاء اصطناعي متخصص في حماية الشعاب المرجانية.
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 29 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🌍 مبادرات جديدة لغوغل في أفريقيا لتعزيز الذكاء الاصطناعي</h3>
+                <p>
+                    أطلقت شركة <strong>غوغل</strong> مبادرات جديدة في أفريقيا لتعزيز تقنيات الذكاء الاصطناعي وتطوير المهارات التقنية في القارة، مما يعكس التزام الشركة بالتوسع العالمي ودعم الأسواق الناشئة.
+                </p>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 29 يوليو 2025</span>
+                    <a href="https://www.aljazeera.net/tech/" class="news-source" target="_blank">المصدر: الجزيرة نت</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Section -->
+        <section class="section mobile-section">
+            <div class="section-header">
+                <img src="mobile_section_icon.png" alt="أيقونة الهواتف الذكية" class="section-icon">
+                <h2>📱 أخبار الهواتف الذكية والأجهزة المحمولة</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>📊 مقارنة بين هاتفي سامسونج Galaxy Z Fold7 و Galaxy S25 Ultra</h3>
+                <div class="highlight-box">
+                    أطلقت <strong>سامسونج</strong> في هذا العام اثنين من أقوى الهواتف الذكية وأكثرها تميزًا، وهما: <strong>Galaxy Z Fold 7</strong> و <strong>Galaxy S25 Ultra</strong>. ويأتي Fold 7 القابل للطي بتحسينات كبيرة في التصميم والأداء.
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">📐 تصميم قابل للطي محسن</div>
+                    <div class="feature-item">📸 كاميرات متطورة</div>
+                    <div class="feature-item">🔋 بطارية طويلة المدى</div>
+                    <div class="feature-item">💪 أداء فائق السرعة</div>
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 28 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>⌚ المواصفات المُتوقعة لساعة جوجل Pixel Watch 4 القادمة</h3>
+                <div class="highlight-box">
+                    تستعد <strong>جوجل</strong> لعقد مؤتمر <strong>Made by Google</strong> الشهر القادم، وستكشف خلاله عن مجموعة جديدة من هواتف Pixel 10، بالإضافة إلى ساعة Pixel Watch 4 المحسنة.
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">🏃 مستشعرات صحية متقدمة</div>
+                    <div class="feature-item">🔋 عمر بطارية أطول</div>
+                    <div class="feature-item">💧 مقاومة محسنة للماء</div>
+                    <div class="feature-item">🎨 تصميم أنيق جديد</div>
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 28 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🛡️ آبل تُطلق خدمة الضمان الجديدة AppleCare One</h3>
+                <div class="highlight-box">
+                    كشفت شركة <strong>آبل</strong> عن خدمتها الجديدة <strong>"AppleCare One"</strong>، وهي خدمة ضمان تتيح للمستخدمين تغطية عدة أجهزة ضمن خطة واحدة، بدلًا من الحاجة لخطط منفصلة لكل جهاز.
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 25 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🇮🇳 بفضل "آبل".. الهند تتصدر قائمة أكبر مصدري الهواتف الذكية</h3>
+                <p>
+                    تصدرت <strong>الهند</strong> قائمة أكبر مصدري الهواتف الذكية عالمياً بفضل استثمارات شركة <strong>آبل</strong> الضخمة في البلاد وتوسيع عمليات التصنيع المحلي، مما يعكس التحول في خريطة الإنتاج العالمية للتكنولوجيا.
+                </p>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 29 يوليو 2025</span>
+                    <a href="https://www.aljazeera.net/tech/" class="news-source" target="_blank">المصدر: الجزيرة نت</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Companies Section -->
+        <section class="section companies-section">
+            <div class="section-header">
+                <img src="tech_companies_icon.png" alt="أيقونة الشركات التقنية" class="section-icon">
+                <h2>🏢 أخبار الشركات التقنية والتطبيقات</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>🎬 إيلون ماسك يخطط لإعادة إطلاق منصة الفيديو Vine</h3>
+                <div class="highlight-box">
+                    أعلن <strong>إيلون ماسك</strong>، مالك منصة X (تويتر سابقًا)، خططًا لإعادة إحياء تطبيق <strong>Vine</strong> الشهير، ولكن هذه المرة بصيغة <strong>"مدعومة بالذكاء الاصطناعي"</strong> لتحسين تجربة إنشاء ومشاركة المحتوى.
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">🤖 إنشاء محتوى بالذكاء الاصطناعي</div>
+                    <div class="feature-item">🎨 تحرير تلقائي للفيديوهات</div>
+                    <div class="feature-item">🎵 إضافة موسيقى ذكية</div>
+                    <div class="feature-item">📊 تحليل الاتجاهات</div>
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 25 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🛰️ ماسك يواجه أزمة جديدة.. عطل عالمي يضرب شبكة ستارلينك</h3>
+                <div class="highlight-box">
+                    تعرضت شبكة <strong>ستارلينك Starlink</strong> التابعة لإيلون ماسك لعطل واسع النطاق تسبب بانقطاع الإنترنت عن عشرات الآلاف من المستخدمين حول العالم، مما أثار تساؤلات حول موثوقية الخدمة.
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 25 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🤝 أوبو تُطلق نظام خدمة عملاء مدعومًا بالذكاء الاصطناعي</h3>
+                <p>
+                    أعلنت شركة <strong>أوبو</strong> تعزيز منظومة خدمات ما بعد البيع لديها من خلال دمج تقنيات الذكاء الاصطناعي، وذلك عبر إدخال نموذج ذكي جديد لتحسين تجربة العملاء وتقديم دعم فني أكثر فعالية.
+                </p>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 29 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🇨🇳 شركات الذكاء الاصطناعي الصينية تتحد لمواجهة قيود الولايات المتحدة</h3>
+                <div class="highlight-box">
+                    كشفت الشركات الصينية عن <strong>تحالفات عدة جديدة</strong> ذات أهداف متنوعة بدءا من مواجهة قيود الولايات المتحدة وحتى تطوير تقنيات الذكاء الاصطناعي ضمن فعاليات مؤتمر الذكاء الاصطناعي العالمي.
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 28 يوليو 2025</span>
+                    <a href="https://www.aljazeera.net/tech/" class="news-source" target="_blank">المصدر: الجزيرة نت</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="section security-section">
+            <div class="section-header">
+                <img src="tech_companies_icon.png" alt="أيقونة الأمن السيبراني" class="section-icon">
+                <h2>🔒 أخبار الأمن السيبراني</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>⚠️ كاسبرسكي: ثغرات "SharePoint" الجديدة مرتبطة بإصلاح غير مكتمل منذ 2020</h3>
+                <div class="highlight-box">
+                    اكتشف فريق الأبحاث والتحليل العالمي <strong>(GReAT)</strong> في شركة كاسبرسكي أن الثغرات الأمنية المستغلة حديثًا في أداة <strong>(ToolShell)</strong> عبر برنامج SharePoint مرتبطة بإصلاح غير مكتمل منذ عام 2020.
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">🔄 تحديث فوري للأنظمة</div>
+                    <div class="feature-item">🔍 مراقبة مستمرة للشبكات</div>
+                    <div class="feature-item">🛡️ تعزيز الحماية الأمنية</div>
+                    <div class="feature-item">📊 تقييم المخاطر بانتظام</div>
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 28 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🎣 كاسبرسكي تحذر من حملة تصيد احتيالي متطورة تستهدف الموظفين</h3>
+                <div class="highlight-box">
+                    اكتشفت شركة <strong>كاسبرسكي</strong> حملة تصيد احتيالي متطورة تستهدف موظفي الشركات، وتتميز بمستوى عالٍ من التخصيص والتعقيد بهدف سرقة بيانات البريد الإلكتروني وكلمات المرور.
+                </div>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 28 يوليو 2025</span>
+                    <a href="https://aitnews.com" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>💻 هجمات سيبرانية موالية لأوكرانيا تعطل حركة الطيران الروسية</h3>
+                <p>
+                    أعلنت مجموعات قراصنة سيبرانيين مسؤوليتهم عن هجوم سيبراني شل حركة الطيران في شركة الطيران الروسي <strong>"إيرولوفت"</strong> مما تسبب في إلغاء 40 رحلة وتعطيل مئات الرحلات الأخرى.
+                </p>
+                
+                <div class="news-meta">
+                    <span class="news-date">📅 30 يوليو 2025</span>
+                    <a href="https://www.aljazeera.net/tech/" class="news-source" target="_blank">المصدر: الجزيرة نت</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section>
+            <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px 0; color: #333;">📊 إحصائيات الأسبوع</h2>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>15</h3>
+                    <p>إجمالي الأخبار المغطاة</p>
+                </div>
+                <div class="stat-card">
+                    <h3>6</h3>
+                    <p>أخبار الذكاء الاصطناعي</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4</h3>
+                    <p>أخبار الهواتف والأجهزة</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4</h3>
+                    <p>أخبار الشركات التقنية</p>
+                </div>
+                <div class="stat-card">
+                    <h3>3</h3>
+                    <p>أخبار الأمن السيبراني</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Points -->
+        <section class="key-points">
+            <h2>🎯 خلاصة الأسبوع</h2>
+            
+            <div class="key-point">
+                <strong>🚀 ثورة GPT-5 قادمة:</strong> إعلان OpenAI عن إطلاق GPT-5 في أغسطس يمثل نقلة نوعية في مجال الذكاء الاصطناعي مع قدرات محسنة في التفكير والفهم.
+            </div>
+            
+            <div class="key-point">
+                <strong>🌐 تطوير أدوات التصفح الذكية:</strong> مايكروسوفت وجوجل تتنافسان في تطوير أدوات تصفح مدعومة بالذكاء الاصطناعي لتحسين تجربة المستخدم.
+            </div>
+            
+            <div class="key-point">
+                <strong>📱 سامسونج تقود سوق الهواتف القابلة للطي:</strong> إطلاق Galaxy Z Fold7 يعزز موقع سامسونج الرائد في تقنيات الطي المتقدمة.
+            </div>
+            
+            <div class="key-point">
+                <strong>🔒 تزايد التهديدات السيبرانية:</strong> اكتشاف ثغرات جديدة وحملات تصيد متطورة يؤكد أهمية تعزيز الأمن السيبراني.
+            </div>
+            
+            <div class="key-point">
+                <strong>🌍 التوسع العالمي للتقنيات:</strong> مبادرات جوجل في أفريقيا وصعود الهند كمصدر للهواتف الذكية يعكس التحول في خريطة التكنولوجيا العالمية.
+            </div>
+        </section>
+
+        <!-- Trends Section -->
+        <section class="overview">
+            <h2>📈 اتجاهات وتوقعات</h2>
+            <div class="features-list">
+                <div class="feature-item">🤖 تسارع في تطوير نماذج الذكاء الاصطناعي الجديدة</div>
+                <div class="feature-item">🌐 دمج الذكاء الاصطناعي في أدوات التصفح والبحث</div>
+                <div class="feature-item">📱 نمو سوق الهواتف القابلة للطي والأجهزة المرنة</div>
+                <div class="feature-item">🔐 تزايد الاستثمار في حلول الأمن السيبراني</div>
+                <div class="feature-item">🌍 توسع الشركات التقنية في الأسواق الناشئة</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h2>📚 المصادر والمراجع</h2>
+            
+            <h3 style="margin: 30px 0 20px 0;">🌐 المواقع العربية المتخصصة:</h3>
+            <div class="sources-grid">
+                <a href="https://aitnews.com/" class="source-link" target="_blank">
+                    🔗 البوابة التقنية - أخبار التقنية والذكاء الاصطناعي
+                </a>
+                <a href="https://www.aljazeera.net/tech/" class="source-link" target="_blank">
+                    🔗 الجزيرة نت - تكنولوجيا
+                </a>
+                <a href="https://www.alarabiya.net/technology" class="source-link" target="_blank">
+                    🔗 العربية تكنولوجيا - آخر أخبار التكنولوجيا
+                </a>
+                <a href="https://www.skynewsarabia.com/technology" class="source-link" target="_blank">
+                    🔗 سكاي نيوز عربية - التقنية والعلوم
+                </a>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; margin: 30px 0;">
+                <h3>📊 إحصائيات التغطية:</h3>
+                <div class="features-list">
+                    <div class="feature-item">📰 إجمالي الأخبار المغطاة: 15 خبر</div>
+                    <div class="feature-item">🌍 المصادر: 4 مواقع متخصصة</div>
+                    <div class="feature-item">🕒 فترة التغطية: 7 أيام (23-30 يوليو)</div>
+                    <div class="feature-item">📈 معدل التحديث: أسبوعي</div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Contact Info -->
+        <section class="contact-info">
+            <h2>📧 للتواصل والاقتراحات</h2>
+            <p><strong>🤖 تم إعداد هذه النشرة بواسطة:</strong> معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</p>
+            <p><strong>🔄 التحديث القادم:</strong> الأسبوع المقبل - 31 يوليو - 6 أغسطس 2025</p>
+            <p><strong>📱 تابعونا للحصول على آخر الأخبار التقنية</strong></p>
+
+            <h3 style="margin: 30px 0 20px 0;">🎯 ميزات النشرة المحسنة:</h3>
+            <div class="features-highlight">
+                <div class="feature-highlight">✨ تصميم جذاب مع ألوان فاتحة</div>
+                <div class="feature-highlight">🎨 أيقونات ملونة معبرة</div>
+                <div class="feature-highlight">📊 إحصائيات منظمة</div>
+                <div class="feature-highlight">🖼️ صور عالية الجودة متخصصة</div>
+                <div class="feature-highlight">📱 تنسيق متجاوب لجميع الأجهزة</div>
+                <div class="feature-highlight">🚀 بدون رسوم متحركة لأداء أفضل</div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p><em>© 2025 النشرة التقنية الأسبوعية - جميع الحقوق محفوظة</em></p>
+            <p><em>🌟 تصميم احترافي • محتوى موثوق • تحديث مستمر</em></p>
+            <p><em>📅 العدد الثاني - الأسبوع الأخير من يوليو 2025</em></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Basic Functionality -->
+    <script>
+        // Print functionality
+        function printNewsletter() {
+            window.print();
+        }
+
+        // Add print button
+        const printButton = document.createElement('button');
+        printButton.innerHTML = '🖨️ طباعة النشرة';
+        printButton.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        `;
+        
+        printButton.addEventListener('click', printNewsletter);
+        printButton.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.3)';
+        });
+        printButton.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        });
+        
+        document.body.appendChild(printButton);
+    </script>
+</body>
+</html>
+
